@@ -1,7 +1,7 @@
 //Ecrire un programme qui demande un nom sans extension pour un fichier,
-//rajoute l’extension « .txt », et crée ce fichier. Ensuite le programme prendra des
-//chaines saisies par l’utilisateur et les écrits dans le fichier. La condition d’arrêt
-//étant une chaine ne contenant pas le caractère ‘#’.
+//rajoute lâ€™extension Â« .txt Â», et crÃ©e ce fichier. Ensuite le programme prendra des
+//chaines saisies par lâ€™utilisateur et les Ã©crits dans le fichier. La condition dâ€™arrÃªt
+//Ã©tant une chaine ne contenant pas le caractÃ¨re â€˜#â€™.
 
 #include<stdio.h>
 #include<stdlib.h>
@@ -10,8 +10,7 @@
 int main(){
 	
 	FILE *fp;
-	char nom[10]; //le nom du fichier à ouvrir
-	//char ligne[100]; //pour désigner chaque ligne du fichier
+	char nom[10]; //le nom du fichier Ã  ouvrir
 	char chaine[100]; //la chaine donnee par l'utilisateur
 	
 	//lire le nom du fichier a creer
@@ -30,13 +29,13 @@ int main(){
 		return 0;
 	}
 	
-	//// Lire et écrire des lignes dans le fichier jusqu'à ce que la chaîne ne contienne pas '#'
+	//// Lire et Ã©crire des lignes dans le fichier jusqu'Ã  ce que la chaÃ®ne ne contienne pas '#'
 	do{
 		printf("donner la ligne a ecrire avec le caractere # : ");
 		gets (chaine);
 		//ecrire la ligne dans le ficher
 		fprintf(fp,"%s\n",chaine);	
-	} while (strchr(chaine, '#') != NULL); // Continuer tant que la chaîne contient '#'
+	} while (strchr(chaine, '#') != NULL); // Continuer tant que la chaÃ®ne contient '#'
 	
 	
 	//fermuture du fichier
